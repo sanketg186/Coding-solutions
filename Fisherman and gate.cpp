@@ -1,3 +1,15 @@
+// There are N fishing spots and 3 gates. At each gate there are some fishermen waiting to reach the nearest unoccupied fishing spot. (Total no of fisherman <=N)
+// Distance between consecutive spots = distance between gate and nearest spot = 1 m
+// Only 1 gate can be opened at a time and all fishermen of that gate must occupy the spots before the next gate is opened.
+// Distance is calculated as gate to nearest spot + nearest spot to closest vacant spot.
+// Find the total sum of minimum distances need to walk for all the fishermen.
+
+// Inputs to be taken:
+// Number of fishing spots
+// Position of the gates
+// Number of fishermen at each gates 
+
+
 #include <iostream>
 #include<bits/stdc++.h>
 using namespace std;
