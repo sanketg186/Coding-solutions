@@ -81,3 +81,38 @@ void bfs(int x,int y){
     }
     
 }
+
+int main() {
+    int i,j;
+    cin>>n>>num;
+    
+   
+    for(i=0;i<n;i++){
+        for(j=0;j<n;j++)
+            cin>>a[i][j];
+    }
+    for(i=0;i<num;i++)
+        cin>>e[i].x>>e[i].y;
+    int res=10000;
+    for(i=0;i<n;i++){
+        for(j=0;j<n;j++){
+            if(a[i][j]==1){
+                bfs(i,j);
+                int ans = 0;
+                for(int k=0;k<num;k++){
+                    
+                    ans=max(ans,dist[e[k].x][e[k].y]);
+                }
+                    res = min(res,ans);
+            
+            }
+            
+        }
+        
+    }
+    cout<<res<<endl;
+    
+    
+    
+	return 0;
+}
