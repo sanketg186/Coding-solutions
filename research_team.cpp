@@ -1,12 +1,12 @@
-A Research team want to establish a research center in a region where they found some rare-elements.They want to make
-it closest to all the rare-elements as close as possible so that they can reduce overall cost of research 
-over there.It is given that all the rare-element’s location is connected by roads.It is also given that Research
-Center can only be build on road.Team decided to assign this task to a coder.If you feel you have that much potential..
-Here is the Task :- Find the shortest of the longest distance of research center from given locations of rare-elements.
+// A Research team want to establish a research center in a region where they found some rare-elements.They want to make
+// it closest to all the rare-elements as close as possible so that they can reduce overall cost of research 
+// over there.It is given that all the rare-element’s location is connected by roads.It is also given that Research
+// Center can only be build on road.Team decided to assign this task to a coder.If you feel you have that much potential..
+// Here is the Task :- Find the shortest of the longest distance of research center from given locations of rare-elements.
 
-locations are given in the matrix cell form where 1 represents roads and 0 no road..
-number of rare-element and their location was also given(number<=5)
-and order of square matrix was less than equal to (20).
+// locations are given in the matrix cell form where 1 represents roads and 0 no road..
+// number of rare-element and their location was also given(number<=5)
+// and order of square matrix was less than equal to (20).
 
 
 
