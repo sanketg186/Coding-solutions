@@ -1,3 +1,14 @@
+// n the grid above,
+// 1: This cell has a coin.
+// 2: This cell has an enemy.
+// 0: It contains nothing.
+// The highlighted(yellow) zone is the control zone. S is a spaceship that we need to control so that we can get maximum coins.
+// Now, S’s initial position will be at the center and we can only move it right or left by one cell or do not move.
+// At each time, the non-highlighted part of the grid will move down by one unit.
+// We can also use a bomb but only once. If we use that, all the enemies in the 5×5 region above the control zone will be killed.
+
+
+
 #include <iostream>
 using namespace std;
 int n,m;
