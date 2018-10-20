@@ -8,6 +8,7 @@ struct Node{
 };
 int max_s=0;
 Node* resnode=NULL;
+vector<int>res;
 void max_sum(Node*root){
     if(root==NULL)
         return;
@@ -49,6 +50,21 @@ int all_sum(Node*root){
     
     return sum;
 }
+void path_sum(Node*root,int cost){
+    if(root->child.size()==0){
+        //cout<<cost;
+        res.push_back(cost+root->val);
+        return;
+    }
+    int cur_sum=root->val;
+    int count=root->child.size();
+    for(int i=0;i<count;i++){
+        path_sum(root->child[i],cost+cur_sum);
+    }
+    
+    return;
+}
+
 int main() {
      Node* root = newNode(1); 
     (root->child).push_back(newNode(2)); 
