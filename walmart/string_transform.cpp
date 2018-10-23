@@ -21,15 +21,21 @@ int convert(string a,string b){
     return cost;
 }
 
-int pal_fun(string s){
+int pal_fun(string s,int bs,int be){
     int i=0,j=s.size()-1;
     int cost=0;
+    //cout<<s<<endl;
     while(i<=j){
-        if(s[i]!=s[j])
+        if(s[i]!=s[j]){
+        if(j>=bs&&j<=be)
+            return 10000;
+        else
             cost++;
+        }
             i++;j--;
+        
     }
-    
+    //cout<<cost<<endl;
     return cost;
 }
 int main() {
@@ -43,18 +49,24 @@ int main() {
 	int pal_cost;
 	int tot_cost=INT_MAX;
 	string mod;
+	int bs=0,be=0;
 	for(i=0;i+lb<sa.size();i++){
 	    string temp=sa.substr(i,lb);
 	    cost=convert(temp,sb);
 	    mod="";
+	    bs=i;
+	    be=bs+lb-1;
 	    if(i!=0)
-	    mod=sa.substr(0,i);
-	    mod=mod+temp;
+	     mod=sa.substr(0,i);
+	    mod=mod+sb;
 	    string rem=sa.substr(i+lb,la-lb);
 	    mod= mod+ rem;
-	    pal_cost=pal_fun(mod);
+	    pal_cost=pal_fun(mod,bs,be);
 	    tot_cost=min(tot_cost,pal_cost+cost);
 	}
+	if(tot_cost>=10000)
+	    cout<<"Not possible";
+	else
 	cout<<tot_cost<<endl;
 	
 	return 0;
