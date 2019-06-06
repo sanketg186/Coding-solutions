@@ -1,8 +1,18 @@
 question link:https://drive.google.com/drive/folders/0B_vP6PhDSlhOODVibWhLRU0yWUU
-//Mr. K has a mania afor rock climbing.
-//Mr. K who comleted several rock-climbing courses in the past now wants to go for a course which is known to be tough and hard.
-//N us height and M is width of the rock.
 
+/*
+QUESTION:
+FIND THE DIFFICULTY OF THE CLIMB.
+Given a grid( nXm matrix) containing values 0,1,2 and 3.
+0 represents no path.
+1 represent an existing path.
+2 is the starting point.
+3 is the destination.
+Starting point is always at left bottom matrix[n,1].
+Destination can be anywhere in the matrix. It is assured that a path exist.
+A rockclimber can move right or left if the adjacent element is also 1.
+The rockclimber however climb up or down skip any number of rows the more rows he skip the greater will the difficulty.
+*/
 using namespace std;
 int sx,sy,gx,gy,res_max=-1;
 int num_steps,flag=0;
